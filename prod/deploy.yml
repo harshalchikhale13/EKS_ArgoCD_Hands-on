@@ -6,7 +6,7 @@ metadata:
     app: hweb
   name: hweb
 spec:
-  replicas: 1
+  replicas: 10
   selector:
     matchLabels:
       app: hweb
