@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: hweb
-  name: hweb
+    app: newweb
+  name: newweb
 spec:
   replicas: 9
   selector:
     matchLabels:
-      app: hweb
+      app: newweb
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: hweb
+        app: newweb
     spec:
       containers:
       - image: vimal13/apache-webserver-php
