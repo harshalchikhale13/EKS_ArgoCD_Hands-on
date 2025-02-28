@@ -1,13 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: harswebapp
+  name: lwwebapp
 spec:
   project: default
   destination:
     server: https://kubernetes.default.svc
     namespace: default
   source:
+    directory:
+      exclude: '{deploy.yml,service.yml}'
     repoURL: https://github.com/harshalchikhale13/EKS_ArgoCD_Hands-on.git
     path: prod
 
