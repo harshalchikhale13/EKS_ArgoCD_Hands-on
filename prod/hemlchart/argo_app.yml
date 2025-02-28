@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: harshhelmapp
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  source:
+    helm: 
+      releaseName: mylwhelm
+    directory:
+#      exclude: '{deploy.yml,service.yml}'
+    repoURL: https://github.com/harshalchikhale13/EKS_ArgoCD_Hands-on.git
+    path: prod/helm/harshchart
+    targetRevision: main
